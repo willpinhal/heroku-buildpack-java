@@ -29,7 +29,7 @@ download_maven() {
   local installDir=$2
   local mavenHome=$3
   rm -rf $mavenHome
-  curl --fail --retry 3 --retry-connrefused --connect-timeout 5 --silent --max-time 60 --location "${mavenUrl}" | tar xzm -C $installDir
+  curl --fail --retry 3 --retry-connrefused --connect-timeout 5 --silent --max-time 240 --location "${mavenUrl}" | tar xzm -C $installDir
   chmod +x $mavenHome/bin/mvn
 }
 
