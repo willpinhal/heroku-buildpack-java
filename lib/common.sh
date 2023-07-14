@@ -13,7 +13,7 @@ install_maven() {
   mcount "mvn.version.${mavenVersion}"
 
   status_pending "Installing Maven ${mavenVersion}"
-  local mavenUrl="https://lang-jvm.s3.us-east-1.amazonaws.com/maven-${mavenVersion}.tar.gz"
+  local mavenUrl="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.2/apache-maven-3.6.2-bin.tar.gz"
   if is_supported_maven_version "${mavenVersion}" "${mavenUrl}"; then
     download_maven "${mavenUrl}" "${installDir}" "${mavenHome}"
     status_done
